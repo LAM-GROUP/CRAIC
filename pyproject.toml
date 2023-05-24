@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "craic"
+version = "0.1.0"
+description = "A python package for identifing crystal phases during nucleation with the help of artificial intelligence classifiers"
+authors = ["aksam432 <akshaykrishnaak9@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
