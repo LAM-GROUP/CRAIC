@@ -7,6 +7,9 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8"
+scikit-learn = "^1.2.2"
+pybind11 = "^2.10.4"
+pyscal2 = {git = "https://github.com/pyscal/pyscal"}
 
 
 [build-system]
