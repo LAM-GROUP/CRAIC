@@ -13,9 +13,9 @@ class Descriptor(metaclass=ABCMeta):
     provides basic common methods.
     """
 
-    def __init__(self, setupFile):
+    def __init__(self, setupDict):
         self.list_files = self._list_files()
-        self.setupFile = setupFile
+        self.setupDict = setupDict
 
     @abstractmethod
     def _read_setup(self):

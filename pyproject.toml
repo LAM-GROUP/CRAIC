@@ -10,6 +10,8 @@ python = "^3.8"
 scikit-learn = "^1.2.2"
 pybind11 = "^2.10.4"
 pyscal2 = {git = "https://github.com/pyscal/pyscal"}
+pyyaml = "^6.0"
+argparse = "^1.4.0"
 
 
 [build-system]

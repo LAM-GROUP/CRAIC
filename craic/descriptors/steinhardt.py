@@ -60,8 +60,8 @@ class Steinhardt(Descriptor):
     """Steinhardt parameters"""
 
     def __init__(self, setupFile):
-        super().__init__(setupFile=setupFile)
-        self._read_setup()
+        super().__init__(setupDict=setupFile)
+        self._read_setup(self.setupDict)
         #List of parameters for Steinhardt computation
         self.qOrders = [2,3,4,5,6,7,8]
         self.neighborMethod = 'voronoi'
@@ -70,9 +70,9 @@ class Steinhardt(Descriptor):
         self.mono = False
         self.skipOld = False
     
-    def _read_setup(self, fileName):
+    def _read_setup(self, setupDict: dict) -> None:
         """Read setup file and assign variables"""
-        print('Reading setup from file: ', fileName)
+        print('Reading setup from dictionary: ', setupDict)
 
     def _compute_descriptors(self):
         """Compute Steinhardt parameters using properties from setup file"""
