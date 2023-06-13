@@ -11,7 +11,15 @@ from sklearn.mixture import GaussianMixture as GM
 #python3 ComputeProbability.py 2_Relaxation/
 inDir = os.path.join(sys.argv[1], '')
 
-def readQ(input_file):
+def readQ(input_file: str) -> np.ndarray:
+    """_summary_
+
+    Args:
+        input_file (str): _description_
+
+    Returns:
+        np.ndarray: _description_
+    """
     pos_tmp=np.genfromtxt(input_file,skip_header=9)
     q_tmp=pos_tmp[:,6:]
     return q_tmp
@@ -74,7 +82,12 @@ if not os.path.exists('0_GMModel/Voronoi/weights.npy'):
 
 
 # Compute probabilities for each atom and write to output file
-def computeProbabilityPerAtom(input_file):
+def computeProbabilityPerAtom(input_file: str) -> None:
+    """_summary_
+
+    Args:
+        input_file (str): _description_
+    """
     # Define output file name
     output_file = input_file.replace(".Q", ".PROB")
     output_file = output_file.replace('QValues', 'Output')
